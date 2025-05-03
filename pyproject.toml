@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "github-activity"
+version = "0.1.0"
+description = "Use GitHub API to fetch user activity and display it in the terminal."
+authors = ["ahoramismo <s.noh@outlook.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [
+  { include = "github_activity", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+requests = "^2.32.3"
+
+[tool.poetry.scripts]
+github-activity = "github_activity.cli:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
